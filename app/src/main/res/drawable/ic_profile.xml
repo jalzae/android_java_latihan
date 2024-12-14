@@ -1,0 +1,29 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lingkaran Luar -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#D6D6D6" />
+        </shape>
+    </item>
+
+    <!-- Siluet Kepala -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+            <size android:width="60dp" android:height="60dp" />
+
+        </shape>
+    </item>
+
+    <!-- Siluet Badan -->
+    <item
+        android:top="60dp"
+        android:bottom="10dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+            <size android:width="90dp" android:height="60dp" />
+
+        </shape>
+    </item>
+</layer-list>
