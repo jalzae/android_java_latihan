@@ -44,18 +44,8 @@ public class MainActivity extends AppCompatActivity {
         itemList.add(new Item("Rust", "Rust is a multi-paradigm programming language focused on performance and safety, especially safe concurrency.", R.drawable.rust));
         itemList.add(new Item("TypeScript", "TypeScript is a strict syntactical superset of JavaScript that adds optional static typing to the language.", R.drawable.typescript));
 
-        ArrayAdapter<Item> adapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, itemList) {
-            @Override
-            public View getView(int position, View convertView, android.view.ViewGroup parent) {
-
-                View view = super.getView(position, convertView, parent);
-                ((TextView) view).setText(itemList.get(position).getName());
-                return view;
-            }
-        };
-
+        ItemAdapter adapter = new ItemAdapter(this, itemList);
         listView.setAdapter(adapter);
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
